@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ManlikeFox &amp; Assoc.</title>
+    <link>/index.xml</link>
+    <description>Recent content on ManlikeFox &amp; Assoc.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 14 Jan 2017 23:13:07 -0500</lastBuildDate>
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Skills Radar</title>
+      <link>/post/2017-01-14-skills-radar/</link>
+      <pubDate>Sat, 14 Jan 2017 23:13:07 -0500</pubDate>
+      
+      <guid>/post/2017-01-14-skills-radar/</guid>
+      <description>&lt;!-- BLOGDOWN-BODY-BEFORE
+
+/BLOGDOWN-BODY-BEFORE --&gt;
+
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)              # all things data
+library(ggradar)                # d3 radar viz - simple
+library(formattable)            # presentation ready data&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;data&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data&lt;/h3&gt;
+&lt;p&gt;Self-assessment tool provided by &lt;a href=&#34;https://qandalab.com/index.php?r=survey/index/sid/327761/lang/en&#34;&gt;qandalab&lt;/a&gt; and greater &lt;a href=&#34;https://analyticsweek.com/content/data-science-skills-and-the-improbable-unicorn/&#34;&gt;context&lt;/a&gt; provided by Bob Hayes at &lt;code&gt;AnalyticsWeek&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;evaluation-criteria&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Evaluation Criteria&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Fundamental Awareness&lt;/code&gt; &lt;em&gt;(0-20)&lt;/em&gt;: You have a common knowledge or an understanding of basic techniques and concepts.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Novice&lt;/code&gt; &lt;em&gt;(20-40)&lt;/em&gt;: You have the level of experience gained in a classroom and/or experimental scenarios or as a trainee on-the-job. You are expected to need help when performing this skill.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Intermediate&lt;/code&gt; &lt;em&gt;(40-60)&lt;/em&gt;: You are able to successfully complete tasks in this competency as requested. Help from an expert may be required from time to time, but you can usually perform the skill independently.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Advanced&lt;/code&gt; &lt;em&gt;(60-80)&lt;/em&gt;: You can perform the actions associated with this skill without assistance. You are certainly recognized within your immediate organization as “a person to ask” when difficult questions arise regarding this skill.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Expert&lt;/code&gt; &lt;em&gt;(80-100)&lt;/em&gt;: You are known as an expert in this area. You can provide guidance, troubleshoot and answer questions related to this area of expertise and the field where the skill is used.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;summary-table&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Summary Table&lt;/h3&gt;
+&lt;table class=&#34;table table-condensed&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+Category
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+Mean
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+Statistics
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #00ff00&#34;&gt;84&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+Business
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #19ff16&#34;&gt;80&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+Technology
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #33ff2c&#34;&gt;76&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+Math
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ccffb3&#34;&gt;52&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+Programming
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+&lt;span style=&#34;display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffe0&#34;&gt;44&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;skills-radar&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Skills Radar&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;#####../content/post/2017-01-14-skills-radar_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;1344&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;!-- BLOGDOWN-HEAD
+
+
+
+
+/BLOGDOWN-HEAD --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hello R Markdown</title>
+      <link>/post/2015-07-23-r-rmarkdown/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      
+      <guid>/post/2015-07-23-r-rmarkdown/</guid>
+      <description>&lt;!-- BLOGDOWN-BODY-BEFORE
+
+/BLOGDOWN-BODY-BEFORE --&gt;
+
+&lt;div id=&#34;r-markdown&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;R Markdown&lt;/h1&gt;
+&lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; class=&#34;uri&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can embed an R code chunk like this:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(cars)
+##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+fit &amp;lt;- lm(dist ~ speed, data = cars)
+fit
+## 
+## Call:
+## lm(formula = dist ~ speed, data = cars)
+## 
+## Coefficients:
+## (Intercept)        speed  
+##     -17.579        3.932&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;including-plots&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Including Plots&lt;/h1&gt;
+&lt;p&gt;You can also embed plots. See Figure &lt;a href=&#34;#fig:pie&#34;&gt;1&lt;/a&gt; for example:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar = c(0, 1, 0, 1))
+pie(
+  c(280, 60, 20),
+  c(&amp;#39;Sky&amp;#39;, &amp;#39;Sunny side of pyramid&amp;#39;, &amp;#39;Shady side of pyramid&amp;#39;),
+  col = c(&amp;#39;#0292D8&amp;#39;, &amp;#39;#F7EA39&amp;#39;, &amp;#39;#C4B632&amp;#39;),
+  init.angle = -50, border = NA
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:pie&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;#####../content/post/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: A fancy pie chart.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;!-- BLOGDOWN-HEAD
+
+
+
+
+/BLOGDOWN-HEAD --&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
